@@ -1,10 +1,8 @@
-import {Tag, Produto, Categoria, Genero } from './types';
-import { v4 } from 'uuid';
-import { listaProdutos } from './database/produtos';
-import { adicionarTag, atualizarProduto, excluir, listagemProdutosTag, listarProdutosPreco, listarTodosProdutos, listarTudo, novoProduto, } from './functions'
-
-
-novoProduto({
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const produtos_1 = require("./database/produtos");
+const functions_1 = require("./functions");
+(0, functions_1.novoProduto)({
     id: '1',
     nome: 'Camisa da Growdev',
     categoria: {
@@ -14,9 +12,8 @@ novoProduto({
     genero: 'F',
     preco: 100,
     quantidade: 1
-})
-
-novoProduto({
+});
+(0, functions_1.novoProduto)({
     id: '2',
     nome: 'Tenis da Growdev 2',
     categoria: {
@@ -27,8 +24,7 @@ novoProduto({
     preco: 500,
     quantidade: 2,
 });
-
-novoProduto({
+(0, functions_1.novoProduto)({
     id: '3',
     nome: 'Tenis da Growdev 3',
     categoria: {
@@ -39,5 +35,4 @@ novoProduto({
     preco: 1500,
     quantidade: 2,
 });
-
-console.log(listaProdutos);
+console.log(produtos_1.listaProdutos);
